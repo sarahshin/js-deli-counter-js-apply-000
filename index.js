@@ -14,17 +14,16 @@ function nowServing(katzDeliLine){
 }
 
 function currentLine(katzDeliLine){
-  var starterString = 'The line is currently: ';
+  var newString = 'The line is currently: ';
   if(katzDeliLine.length === 0){
     return 'The line is currently empty.';
   }
   else {
     for(let i=0; i<katzDeliLine.length; i++){
-      var currentNamesString = '';
       var personName = katzDeliLine[i];
-      currentNamesString.join(', ') `${i+1}. ${personName}`;
+      newString += `${i+1}. ${personName}, `;
     }
+    newString = newString.slice(0,-2);
     return newString;
   }
-  
 }
