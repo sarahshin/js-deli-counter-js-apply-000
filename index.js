@@ -10,7 +10,7 @@ function nowServing(katzDeliLine){
   else {
     var personBeingServed = katzDeliLine[0];
     return `Currently serving ${personBeingServed}.`;
-    katzDeliLine.shift;
+    katzDeliLine.splice(0,1);
   }
 }
 
